@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+            margin: auto;
+        }
+
+        body {
+            font-size: 1.5em;
+            background-color: rgb(113, 113, 223);
+            color: rgb(255, 189, 66);
+            font-weight: bold;
+        }
+
+        h1 {
+            margin-top: 10px;
+        }
+
+        p {
+            margin-top: 10px;
+        }
+
+        input { 
+            display: block;
+            margin-top: 10px;
+            outline: none;
+            height: 30px;
+        }
+
+        div {
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="cx1" id="cx1"> 
+    <p>+</p>
+    <input type="number" name="cx2" id="cx2">
+    <input type="button" value="Somar" id="soma">
+    <div id="res">Resultado</div>
+
+    <script>
+
+        var soma = window.document.getElementById('soma')
+        soma.addEventListener('click', somar)
+
+        function somar() {
+        var x1 = window.document.getElementById('cx1')
+        var x2 = window.document.querySelector('input#cx2')
+        var res = window.document.getElementById('res')
+
+        var n1 = Number(cx1.value)
+        var n2 = Number(cx2.value)
+        var s = n1 + n2
+
+        res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>!`
+        }
+
+    </script>
+</body>
+</html>
