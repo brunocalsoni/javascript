@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cadastro de Pessoas</h1>
+    <p>Digite o nome do país onde você nasceu: <input type="text" name="txt" id="itxt"></p> 
+    <p><input type="button" value="Enviar" onclick="resultado()"></p>
+    <div id="res">
+
+    </div>
+    <script>
+        function resultado() {
+            var x1 = window.document.getElementById('itxt')
+            var x2 = window.document.querySelector('div#res')
+            var x3 = x1.value
+            var x4 = x3.toUpperCase()
+
+            x2.innerHTML = `País onde você nasceu: ${x4}`
+
+            if (x4 != 'BRASIL') {
+                x2.innerHTML += `<p>Você é Estrangeiro</p>`
+            }
+
+            else {
+                x2.innerHTML += `<p>Você é Brasileiro</p>`
+            }
+        }
+    </script>
+</body>
+</html>
