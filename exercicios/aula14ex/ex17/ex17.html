@@ -5,23 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="estilos-extras/style01.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body onload="carregar()">
+<body>
     <header>
-        <h1>Hora do Dia</h1>
+        <h1>Tabuada</h1>
     </header>
     <section>
         <div>
-            <p id="msg">Bom dia</p>
+            <p>
+                <label for="num">Número: <input type="number" name="num" id="num"></label>
+                <input type="button" value="Gerar Tabuada" onclick="tabuada()">
+            </p>
         </div>
         <div>
-            <img id="img" src="imagens-extras/extra01/dia.png" alt="foto_dia">
+            <select name="tabuada" id="seltab" size="10">
+                <option>Digite um número acima</option>
+            </select>
         </div>
     </section>
     <footer>
         <p>&copy; brunocalsoni</p>
     </footer>
-    <script src="js-extras/extra01.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
