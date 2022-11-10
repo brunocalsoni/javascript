@@ -1,5 +1,12 @@
-let num = [4, 5, 6, 8, 10, 678]
+let num = [2, 5, 6]
+num[3] = 3 
+num.push(1)
+num.push(4)
+num[6] = 8
 
+
+
+console.log(num.length)
 console.log(num)
-
-num[6] = 157 
+num.sort()
+console.log(num)
